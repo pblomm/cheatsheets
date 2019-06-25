@@ -7,48 +7,48 @@
 #### CREATING
 
 ```
-create table table_naam (
+create table table_name (
 	id	number,
-	naam 	varchar2(10)
+	name 	varchar2(10)
 	);
 ```
 
 #### INSERTING ROWS
 
 ```
-insert into table_naam (id)
+insert into table_name (id)
 values (50);
 
-insert into table_naam
+insert into table_name
 values (50, 'pascal');
 ```
 
 #### DELETING ROWS
 
 ```
-delete from table_naam
+delete from table_name
 where id = 100;
 ```
 
 #### UPDATING ROWS
 
 ```
-update table_naam
-set naam = 'tom'
+update table_name
+set name = 'tom'
 where id = 50;
 ```
 
 #### DROPPING
 
 ```
-drop table table_naam;
+drop table table_name;
 ```
 
 #### CONSTRAINTS
 
 ## PL/SQL
 
-### SYSTEEMTABELLEN
+### SYSTEM TABLES
 
 user_source		bevat de zelfgeschreven procedures/functies/... van de gebruiker
 
@@ -79,8 +79,8 @@ Indien meer moet men gebruik maken van bvb collections.
 Steeds evenveel attribuutnamen als er variabelen zijn om in te steken.
 
 ```
-select attrib_naam into v_attrib
-from tabel_naam;
+select attr_name into v_attr
+from table_name;
 ```
 
 ### BULK DML
@@ -117,7 +117,7 @@ Door de gebruiker gedefinieerd.
 In het declaratiegedeelte van het programma.
 
 ```
-cursor cursor_naam is
+cursor cursor_name is
 query;
 ```
 
@@ -126,9 +126,9 @@ Bij elke fetch haalt men een rij op uit de actieve set.
 De ruimte wordt terug vrijgegeven.
 
 ```
-open cursor_naam;
-fetch cursor_naam into r_een_record
-close cursor_naam;
+open cursor_name;
+fetch cursor_name into r_record
+close cursor_name;
 ```
 
 #### FETCH BULK COLLECT INTO
